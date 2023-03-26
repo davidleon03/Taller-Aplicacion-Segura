@@ -14,8 +14,8 @@ public class Spark1 {
     public static void main(String... args) {
         secure(getKeyStore(), getPwdStore() , null, null);
         port(getPort());
-        get("/local", (req, res) -> "Hello SPARK 1");
-        get("/aws", (req, res) -> URLreaderSecure.readSecureUrl(getUrl(), getKeyOtherStore(), getPwdStore()));
+        get("/aws", (req, res) -> "Hello SPARK 1");
+        get("/aws2", (req, res) -> URLreaderSecure.readSecureUrl(getUrl(), getKeyOtherStore(), getPwdStore()));
     }
     /**
 

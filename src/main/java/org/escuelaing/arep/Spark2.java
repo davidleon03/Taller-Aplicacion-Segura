@@ -13,8 +13,8 @@ public class Spark2 {
     public static void main(String... args) {
         secure(getKeyStore(), getPwdStore() , null, null);
         port(getPort());
-        get("/local", (req, res) -> "Hello  SPARK 2");
-        get("/aws", (req, res) -> URLreaderSecure.readSecureUrl(getUrl(), getKeyOtherStore(), getPwdStore()));
+        get("/aws", (req, res) -> "Hello  SPARK 2");
+        get("/aws2", (req, res) -> URLreaderSecure.readSecureUrl(getUrl(), getKeyOtherStore(), getPwdStore()));
     }
     /**
 

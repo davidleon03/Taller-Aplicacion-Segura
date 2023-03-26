@@ -14,7 +14,7 @@ public class Spark1 {
     public static void main(String... args) {
         secure(getKeyStore(), getPwdStore() , null, null);
         port(getPort());
-        get("/local", (req, res) -> "Hello Local SPARK 1");
+        get("/local", (req, res) -> "Hello SPARK 1");
         get("/aws", (req, res) -> URLreaderSecure.readSecureUrl(getUrl(), getKeyOtherStore(), getPwdStore()));
     }
     /**
@@ -28,7 +28,7 @@ public class Spark1 {
         if (System.getenv("URL") != null) {
             return System.getenv("PORT");
         }
-        return "https://52.3.251.160:3001/aws";
+        return "https://52.3.251.160:3001/local";
     }
     /**
 
